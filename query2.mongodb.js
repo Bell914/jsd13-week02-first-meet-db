@@ -1,28 +1,8 @@
-use("sample_mflix");
-
-// use("sample_mflix");
-
-// db.movies.find({ type: "movie", rated: "TV-G" }).count();
-
-// use("sample_mflix");
-
-//  db.movies.find({ type: "movie", rated: "TV-G" });
-
-// use("sample_mflix");
-
-// db.theaters.find({ "location.address.state": "AL" }).count()
-
-// use("sample_mflix");
-
-// db.theaters.find({ "location.address.city": "La Quinta" }).count()
-
-// use("sample_mflix");
-
-// db.theaters.findOne({ "location.address.city": "La Quinta" })
-
-// use("sample_mflix");
-
-// db.movies.find({ plot: { $regex: "American", $options: "i" } }).count()q
+ use("sample_mflix");
+//What is an example of type 'movie' and rated 'TV-G' look like?
+ db.movies.find({ type: "movie", rated: "TV-G" }).count();
+// How many movies are there in 'movie' type and 'TV-G' rated?
+// db.movies.find({ type: "movie", rated: "TV-G" });
 
 
 
