@@ -1,0 +1,99 @@
+use("nakom-db");
+
+// Clear existing data
+db.orders.deleteMany({});
+
+// Insert mock data for Orders collection
+
+db.orders.insertMany([
+  {
+    "_id": ObjectId("65f500000000000000000001"),
+    "order_date": new Date("2026-03-01T10:00:00Z"),
+    "total_price": 18900,
+    "user_id": ObjectId("65f100000000000000000001"), // สมชาย ใจดี
+    "address_id": ObjectId("65f600000000000000000001"),
+    "status": "paid",
+    "items": [
+      {
+        "product_id": ObjectId("65f200000000000000000001"), // โน้ตบุ๊ก UltraLite 14
+        "name": "โน้ตบุ๊ก UltraLite 14",
+        "price": 18900,
+        "quantity": 1
+      }
+    ],
+    "payment": {
+      "method": "promptpay",
+      "status": "success",
+      "transaction_ref": "TXN-2026-000123",
+      "paid_at": new Date("2026-03-01T10:15:00Z")
+    },
+    "shipment": {
+      "provider": "Kerry",
+      "tracking_number": "KE1234567890TH",
+      "status": "in_transit",
+      "shipped_at": new Date("2026-03-02T08:00:00Z")
+    }
+  },
+//   {
+//     "_id": ObjectId("65f500000000000000000002"),
+//     "order_date": new Date("2026-03-05T13:20:00Z"),
+//     "total_price": 8080,
+//     "user_id": ObjectId("65f100000000000000000002"), // วิภา รักเรียน
+//     "address_id": ObjectId("65f600000000000000000002"),
+//     "status": "pending",
+//     "items": [
+//       {
+//         "product_id": ObjectId("65f200000000000000000003"), // เมาส์ไร้สาย ComfortClick
+//         "name": "เมาส์ไร้สาย ComfortClick",
+//         "price": 590,
+//         "quantity": 2
+//       },
+//       {
+//         "product_id": ObjectId("65f200000000000000000004"), // แท็บเล็ต EasyView 10
+//         "name": "แท็บเล็ต EasyView 10",
+//         "price": 6900,
+//         "quantity": 1
+//       }
+//     ],
+//     "payment": {
+//       "method": "credit_card",
+//       "status": "pending",
+//       "transaction_ref": null,
+//       "paid_at": null
+//     },
+//     "shipment": {
+//       "provider": null,
+//       "tracking_number": null,
+//       "status": "processing",
+//       "shipped_at": null
+//     }
+//   },
+//   {
+//     "_id": ObjectId("65f500000000000000000003"),
+//     "order_date": new Date("2026-02-10T08:45:00Z"),
+//     "total_price": 39900,
+//     "user_id": ObjectId("65f100000000000000000001"), // สมชาย ใจดี
+//     "address_id": ObjectId("65f600000000000000000001"),
+//     "status": "completed",
+//     "items": [
+//       {
+//         "product_id": ObjectId("65f200000000000000000002"), // เกมมิ่งโน้ตบุ๊ก StrikeForce G5
+//         "name": "เกมมิ่งโน้ตบุ๊ก StrikeForce G5",
+//         "price": 39900,
+//         "quantity": 1
+//       }
+//     ],
+//     "payment": {
+//       "method": "installment",
+//       "status": "success",
+//       "transaction_ref": "TXN-2026-000098",
+//       "paid_at": new Date("2026-02-10T09:00:00Z")
+//     },
+//     "shipment": {
+//       "provider": "Flash",
+//       "tracking_number": "FL9988776655TH",
+//       "status": "delivered",
+//       "shipped_at": new Date("2026-02-11T07:30:00Z")
+//     }
+//   }
+// ]);

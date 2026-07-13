@@ -1,0 +1,65 @@
+use("nakom-db");
+
+// Clear existing data
+db.products.deleteMany({});
+
+// Insert mock data for Products collection
+
+db.products.insertMany([
+  {
+    "_id": ObjectId("65f200000000000000000001"),
+    "name": "โน้ตบุ๊ก UltraLite 14",
+    "sku": "NB-UL14-001",
+    "price": 18900,
+    "description": "โน้ตบุ๊กบางเบา เหมาะกับงานเอกสารและเรียนออนไลน์",
+    "spec_summary": "Core i5, RAM 16GB, SSD 512GB",
+    "image_url": "https://cdn.nakom.com/products/nb-ul14.jpg",
+    "usage_tag": "เรียน",
+    "warranty_months": 12,
+    "category_id": ObjectId("65f300000000000000000001"), // Notebook
+    "brand_id": ObjectId("65f400000000000000000001"), // NaTech
+    "created_at": ISODate("2026-01-10T00:00:00Z")
+  },
+//   {
+//     "_id": ObjectId("65f200000000000000000002"),
+//     "name": "เกมมิ่งโน้ตบุ๊ก StrikeForce G5",
+//     "sku": "NB-SFG5-002",
+//     "price": 39900,
+//     "description": "โน้ตบุ๊กเกมมิ่งจอ 144Hz การ์ดจอแยกแรง",
+//     "spec_summary": "Ryzen 7, RAM 16GB, RTX 4060, SSD 1TB",
+//     "image_url": "https://cdn.nakom.com/products/nb-sfg5.jpg",
+//     "usage_tag": "เกม",
+//     "warranty_months": 24,
+//     "category_id": ObjectId("65f300000000000000000001"), // Notebook
+//     "brand_id": ObjectId("65f400000000000000000002"), // StrikeForce
+//     "created_at": ISODate("2026-01-15T00:00:00Z")
+//   },
+//   {
+//     "_id": ObjectId("65f200000000000000000003"),
+//     "name": "เมาส์ไร้สาย ComfortClick",
+//     "sku": "MS-CC-003",
+//     "price": 590,
+//     "description": "เมาส์ไร้สายจับถนัดมือ เสียงคลิกเบา",
+//     "spec_summary": "Wireless 2.4GHz, DPI 1600",
+//     "image_url": "https://cdn.nakom.com/products/ms-cc.jpg",
+//     "usage_tag": "ทำงาน",
+//     "warranty_months": 6,
+//     "category_id": ObjectId("65f300000000000000000002"), // Accessory
+//     "brand_id": ObjectId("65f400000000000000000001"), // NaTech
+//     "created_at": ISODate("2026-02-01T00:00:00Z")
+//   },
+//   {
+//     "_id": ObjectId("65f200000000000000000004"),
+//     "name": "แท็บเล็ต EasyView 10 (ตัวหนังสือใหญ่)",
+//     "sku": "TB-EV10-004",
+//     "price": 6900,
+//     "description": "แท็บเล็ตหน้าจอใหญ่ อ่านง่าย เหมาะกับผู้สูงอายุ",
+//     "spec_summary": "จอ 10.4 นิ้ว, RAM 4GB, แบตอึด",
+//     "image_url": "https://cdn.nakom.com/products/tb-ev10.jpg",
+//     "usage_tag": "ผู้สูงอายุ",
+//     "warranty_months": 12,
+//     "category_id": ObjectId("65f300000000000000000003"), // Tablet
+//     "brand_id": ObjectId("65f400000000000000000003"), // EasyView
+//     "created_at": ISODate("2026-02-20T00:00:00Z")
+//   }
+// ]);
